@@ -1,0 +1,22 @@
+{
+  "exp_name":"Encodec-Seanet",
+  "type": "Trainer1D",
+  "device": "cuda:0",
+
+  "train_json_path": "./train_config/mit/train.json",
+  "val_json_path" : "./train_config/mit/val.json",
+  "test_json_path": "./train_config/mit/test.json",
+
+  "encoder": "seanet",
+  "quantizer": "vq",
+  "discriminator": "None",
+
+  "train_dataset": "mit-bih",
+  "batch_size": 32,
+  "optim": "Adam",
+  "lr": 3e-4,
+  "epochs": 200,
+
+  "num_workers": 3,
+  "exp_dir" : "experiments/"
+}
